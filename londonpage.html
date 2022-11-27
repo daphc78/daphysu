@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=decive-width">
+<title>londonpage</title>
+	<link href="stylesheet.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+	<div class="aboutlogo"><a href="index.html" target="_self">Daphne Isu Choi</a></div>
+	
+<div class="londonpcontainer">
+		
+	<div class="aboutdropdown"></div>
+		<div class="londonmenu1"><a href="index.html" class="effect-underline">Home</a>
+			<a href="about.html" class="effect-underline">About</a>
+			<a href="gallery.html" class="effect-underline">Gallery</a>
+		</div>
+		</div>
+	
+	
+	
+	<!-- Images used to open the lightbox -->
+	<div class="slideup"></div>
+
+	<div class="row1">
+  <div class="column1">
+     <img src="images/london1.png" width="100%" height="auto" alt="london1" onclick="openModal();currentSlide(1)" class="hover-shadow"/></div>
+  <div class="column2">
+	 <img src="images/london2.png" width="100%" height="auto" alt="london2" /></div>
+	
+</div>
+  
+	
+	<div class="row2">
+  <div class="column3">
+   <img src="images/london3.png" width="250" height="auto" alt="london3" onclick="openModal();currentSlide(2)" class="hover-shadow"/>
+     <img src="images/london4.png" width="250" height="auto" alt="london4" onclick="openModal();currentSlide(3)" class="hover-shadow"/>
+		
+	<img src="images/london5.png" width="250" height="auto" alt="london5" onclick="openModal();currentSlide(4)" class="hover-shadow"/>
+	<img src="images/london6.png" width="250" height="auto" alt="london6" onclick="openModal();currentSlide(5)" class="hover-shadow"/></div>
+
+</div>
+	
+	<div class="row3">
+	<div class="column4">
+		<img src="images/london7.png" width="500" height="auto" alt="london6" onclick="openModal();currentSlide(6)" class="hover-shadow"/>
+		<img src="images/london8.png" width="639" height="auto" alt="london6" onclick="openModal();currentSlide(7)" class="hover-shadow"/>
+				
+		</div>
+		</div>
+<div class="row4">
+	<div class="column5">
+		<img src="images/london9.png" width="350" height="465" alt="london9" onclick="openModal();currentSlide(8)" class="hover-shadow"/>
+		<img src="images/london91.png" width="350" height="465" alt="london11" onclick="openModal();currentSlide(9)" class="hover-shadow"/>
+		<img src="images/london92.png" width="350" height="465" alt="london12" onclick="openModal();currentSlide(10)" class="hover-shadow"/>	
+		
+		</div>
+	</div>
+	
+	<!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+<!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 10</div>
+      <img src="images/londonwide1.png"  alt="london1wide">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 10</div>
+      <img src="images/londonwide3.png" alt="london3wide">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 /10</div>
+      <img src="images/londonwide4.png" alt="london4wide">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 10</div>
+      <img src="images/londonwide5.png"  alt="london5wide">
+    </div>
+
+	  
+	  <div class="mySlides">
+      <div class="numbertext">5 / 10</div>
+      <img src="images/londonwide6.png" alt="london6wide">
+    </div>
+
+	  
+	  <div class="mySlides">
+      <div class="numbertext">6 / 10</div>
+      <img src="images/londonwide7.png"  alt="london7wide">
+    </div>
+
+	  
+	  
+	  <div class="mySlides">
+      <div class="numbertext">7 / 10</div>
+      <img src="images/londonwide8.png"  alt="london8wide">
+    </div>
+
+	  <div class="mySlides">
+      <div class="numbertext">8 / 10</div>
+      <img src="images/londonwide9.png"  alt="london9wide">
+    </div>
+	  
+	  <div class="mySlides">
+      <div class="numbertext">9 / 10</div>
+      <img src="images/londonwide91.png" alt="london10wide">
+    </div>
+	  
+	  <div class="mySlides">
+      <div class="numbertext">10 / 10</div>
+      <img src="images/londonwide92.png"  alt="london11wide">
+    </div>
+	  
+	  
+	  
+	  
+	  
+	  
+    
+   
+	</div>
+	</div>
+	
+	<footer class="aboutfooter"><p>copyright©daphneisuchoi</p>
+		allrightsreserved
+	</footer>
+	
+	
+	<script>
+// Open the Modal
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+// Close the Modal
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+	
+	
+	
+</body>
+</html>
